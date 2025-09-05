@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', cursive; /* Minecraft-style font */
   font-weight: normal;
 }
 
@@ -49,10 +49,11 @@ nav ul li a {
   transition: 0.3s;
 }
 
-nav ul li:nth-child(2) a:hover { color: #ff3df7; text-shadow: 0 0 8px #ff3df7; }
-nav ul li:nth-child(3) a:hover { color: #39ff14; text-shadow: 0 0 8px #39ff14; }
-nav ul li:nth-child(4) a:hover { color: #ffa500; text-shadow: 0 0 8px #ffa500; }
-nav ul li:nth-child(5) a:hover { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+/* Hover colors (Home, Vote, Store, Discord) */
+nav ul li:nth-child(1) a:hover { color: #ff3df7; text-shadow: 0 0 8px #ff3df7; }
+nav ul li:nth-child(2) a:hover { color: #39ff14; text-shadow: 0 0 8px #39ff14; }
+nav ul li:nth-child(3) a:hover { color: #ffa500; text-shadow: 0 0 8px #ffa500; }
+nav ul li:nth-child(4) a:hover { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
 
 nav ul li a.active {
   color: #fff;
@@ -197,4 +198,3 @@ footer {
   font-size: 10px;
   margin-top: 40px;
 }
-
