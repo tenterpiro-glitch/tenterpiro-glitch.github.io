@@ -1,158 +1,53 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: normal;
-}
-
-body {
-  background: linear-gradient(135deg, #0a0f1c, #001f33);
-  color: #eafaff;
-  line-height: 1.6;
-}
-
-/* Navbar */
-header {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(10px);
-  z-index: 100;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav h1 {
-  color: #00f0ff;
-  font-size: 1.8rem;
-  text-shadow: 0 0 15px #00f0ff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #eafaff;
-  transition: 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: #00f0ff;
-  text-shadow: 0 0 10px #00f0ff;
-}
-
 /* Hero Section */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
+  height: 100vh;
   background: url("https://wallpapercave.com/wp/wp9115049.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.hero .glow {
   color: #00f0ff;
   text-shadow: 0 0 20px #00f0ff;
 }
 
-.hero .highlight {
+.hero .ip span {
   color: #00f0ff;
   font-weight: bold;
   text-shadow: 0 0 15px #00f0ff;
 }
 
-/* Cards Section */
-.gamemodes, .page {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.cards, .store-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-.card {
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(0, 240, 255, 0.5);
-  padding: 25px;
-  border-radius: 12px;
-  width: 260px;
-  transition: 0.3s;
-  backdrop-filter: blur(10px);
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border-color: #00f0ff;
-  box-shadow: 0 0 20px #00f0ff;
-}
-
-.card h3 {
-  color: #00f0ff;
-  margin-bottom: 12px;
-}
-
-.card button {
-  margin-top: 12px;
-  padding: 10px 22px;
-  background: #00f0ff;
-  border: none;
-  border-radius: 6px;
-  color: #001f33;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: bold;
-}
-
-.card button:hover {
-  background: #00cfe6;
-  box-shadow: 0 0 15px #00f0ff;
-}
-
-/* Vote Page */
-.vote-links {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.vote-links a {
-  padding: 14px;
+.hero-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.2rem;
   background: #00f0ff;
   color: #001f33;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.vote-links a:hover {
+.hero-btn:hover {
   background: #00cfe6;
-  box-shadow: 0 0 15px #00f0ff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 22px;
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 45px;
-  color: #88f7ff;
+  box-shadow: 0 0 20px #00f0ff;
 }
 
