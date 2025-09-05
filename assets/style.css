@@ -1,42 +1,117 @@
-/* Hero Section */
+/* ===============================
+   RESET & GLOBAL
+=================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background: linear-gradient(135deg, #050d18, #001a29);
+  color: #eafaff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   NAVBAR
+=================================*/
+header {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 15px 25px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 2px solid rgba(0, 240, 255, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: #00f0ff;
+  font-size: 1.9rem;
+  text-shadow: 0 0 18px #00f0ff;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #eafaff;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00f0ff;
+  text-shadow: 0 0 12px #00f0ff;
+}
+
+/* ===============================
+   HERO SECTION
+=================================*/
 .hero {
   height: 100vh;
   background: url("https://wallpapercave.com/wp/wp9115049.jpg") center/cover no-repeat;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 15px;
   backdrop-filter: blur(8px);
 }
 
 .hero h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin-bottom: 15px;
   color: #fff;
 }
 
 .hero .glow {
   color: #00f0ff;
-  text-shadow: 0 0 20px #00f0ff;
+  text-shadow: 0 0 25px #00f0ff, 0 0 40px #00e0ff;
 }
 
 .hero .ip span {
   color: #00f0ff;
   font-weight: bold;
-  text-shadow: 0 0 15px #00f0ff;
+  text-shadow: 0 0 20px #00f0ff;
 }
 
 .hero-btn {
-  margin-top: 20px;
+  margin-top: 25px;
   display: inline-block;
-  padding: 12px 28px;
+  padding: 14px 32px;
   font-size: 1.2rem;
   background: #00f0ff;
   color: #001f33;
@@ -48,6 +123,113 @@
 
 .hero-btn:hover {
   background: #00cfe6;
+  box-shadow: 0 0 25px #00f0ff, 0 0 40px #00e0ff;
+}
+
+/* ===============================
+   GAMEMODES / STORE CARDS
+=================================*/
+.gamemodes, .page {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.gamemodes h2, .page h2 {
+  font-size: 2.2rem;
+  color: #00f0ff;
+  text-shadow: 0 0 18px #00f0ff;
+  margin-bottom: 25px;
+}
+
+.cards, .store-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(0, 240, 255, 0.4);
+  padding: 25px;
+  border-radius: 12px;
+  width: 270px;
+  transition: 0.3s;
+  backdrop-filter: blur(12px);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: #00f0ff;
+  box-shadow: 0 0 25px #00f0ff, 0 0 40px #00e0ff;
+}
+
+.card h3 {
+  color: #00f0ff;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #ccefff;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 24px;
+  background: #00f0ff;
+  border: none;
+  border-radius: 6px;
+  color: #001f33;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #00cfe6;
+  box-shadow: 0 0 18px #00f0ff;
+}
+
+/* ===============================
+   VOTE PAGE
+=================================*/
+.vote-links {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.vote-links a {
+  padding: 14px 22px;
+  background: #00f0ff;
+  color: #001f33;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  width: 220px;
+  text-align: center;
+}
+
+.vote-links a:hover {
+  background: #00cfe6;
   box-shadow: 0 0 20px #00f0ff;
 }
 
+/* ===============================
+   FOOTER
+=================================*/
+footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 2px solid rgba(0, 240, 255, 0.3);
+  color: #88f7ff;
+  margin-top: 50px;
+}
