@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #001f2e, #003b47, #006d77);
+  background: linear-gradient(135deg, #0a0a0a, #111b3d, #3d0f4a);
   color: #fff;
   min-height: 100vh;
   background-attachment: fixed;
@@ -49,7 +49,11 @@ nav ul li a {
   transition: 0.3s;
 }
 
-nav ul li a:hover,
+nav ul li:nth-child(2) a:hover { color: #ff3df7; text-shadow: 0 0 8px #ff3df7; }
+nav ul li:nth-child(3) a:hover { color: #39ff14; text-shadow: 0 0 8px #39ff14; }
+nav ul li:nth-child(4) a:hover { color: #ffa500; text-shadow: 0 0 8px #ffa500; }
+nav ul li:nth-child(5) a:hover { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+
 nav ul li a.active {
   color: #fff;
   text-shadow: 0 0 8px #00f7ff;
@@ -62,12 +66,12 @@ nav ul li a.active {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('https://i.ibb.co/6rxdQxL/minecraft-bg.jpg') center/cover no-repeat;
+  background: url('https://i.ibb.co/vY8nHrX/mc-dark-bg.jpg') center/cover no-repeat;
   position: relative;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(20,20,40,0.7));
   padding: 40px;
   border-radius: 15px;
 }
@@ -79,7 +83,7 @@ nav ul li a.active {
 
 .hero .glow {
   color: #00f7ff;
-  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  text-shadow: 0 0 10px #00f7ff, 0 0 20px #ff3df7;
 }
 
 .hero .ip {
@@ -90,7 +94,7 @@ nav ul li a.active {
 .hero-btn {
   display: inline-block;
   padding: 12px 20px;
-  background: #00f7ff;
+  background: linear-gradient(90deg, #00f7ff, #39ff14);
   color: #000;
   border-radius: 8px;
   text-decoration: none;
@@ -98,12 +102,12 @@ nav ul li a.active {
 }
 
 .hero-btn:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 0 15px #00f7ff;
+  background: linear-gradient(90deg, #ff3df7, #ffa500);
+  color: #fff;
+  box-shadow: 0 0 15px #ff3df7;
 }
 
-/* Cards (Gamemodes, Store, Vote) */
+/* Cards */
 section {
   padding: 60px 20px;
   text-align: center;
@@ -113,7 +117,7 @@ h2 {
   font-size: 20px;
   margin-bottom: 40px;
   color: #00f7ff;
-  text-shadow: 0 0 8px #00f7ff;
+  text-shadow: 0 0 8px #ff3df7;
 }
 
 .cards, .store-cards, .vote-links {
@@ -124,23 +128,25 @@ h2 {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 20px;
   width: 220px;
   transition: 0.3s;
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 15px #00f7ff;
+  box-shadow: 0 0 15px #00f7ff, 0 0 25px #ff3df7;
 }
 
 .card h3 {
   margin-bottom: 10px;
   font-size: 14px;
-  color: #00f7ff;
+  color: #39ff14;
+  text-shadow: 0 0 6px #39ff14;
 }
 
 .card p {
@@ -150,25 +156,26 @@ h2 {
 
 .card button {
   padding: 8px 12px;
-  background: #00f7ff;
+  background: linear-gradient(90deg, #00f7ff, #ff3df7);
   border: none;
   border-radius: 6px;
   font-size: 12px;
   cursor: pointer;
   transition: 0.3s;
+  color: #000;
 }
 
 .card button:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 0 10px #00f7ff;
+  background: linear-gradient(90deg, #39ff14, #ffa500);
+  color: #fff;
+  box-shadow: 0 0 10px #39ff14;
 }
 
 /* Vote Page Links */
 .vote-links a {
   display: inline-block;
   padding: 12px 18px;
-  background: #00f7ff;
+  background: linear-gradient(90deg, #00f7ff, #ff3df7);
   color: #000;
   text-decoration: none;
   border-radius: 8px;
@@ -177,9 +184,9 @@ h2 {
 }
 
 .vote-links a:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 0 12px #00f7ff;
+  background: linear-gradient(90deg, #39ff14, #ffa500);
+  color: #fff;
+  box-shadow: 0 0 12px #39ff14;
 }
 
 /* Footer */
