@@ -1,172 +1,144 @@
-body {
+/* Global Reset */
+* {
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
   font-weight: normal;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  color: white;
 }
 
+body {
+  background: #0e0e0e;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Navbar */
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: rgba(0,0,0,0.6);
+  background: #1c1c1c;
+  padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-header .logo {
-  height: 50px;
-  margin-right: 15px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header .main-title {
-  font-weight: bold;
-  font-size: 1.8rem;
-  margin-right: auto;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
+nav h1 {
+  color: #ff4444;
+  font-size: 1.5rem;
 }
 
-header nav a {
-  margin-left: 20px;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
   text-decoration: none;
-  color: #00ffff;
+  color: #f1f1f1;
   transition: 0.3s;
 }
 
-header nav a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 5px #ff00ff;
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ff4444;
 }
 
+/* Hero Section */
 .hero {
   text-align: center;
-  padding: 100px 20px;
-  background: url('https://wallpaperaccess.com/full/1289986.jpg') center/cover no-repeat;
-  color: #fff;
+  padding: 80px 20px;
+  background: url("https://wallpapercave.com/wp/wp12120368.jpg") center/cover no-repeat;
 }
 
-.hero .btn {
-  display: inline-block;
-  padding: 10px 25px;
-  margin-top: 20px;
-  background: #00ffff;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.hero .btn:hover {
-  background: #ff00ff;
-  color: white;
-  box-shadow: 0 0 15px #ff00ff;
-}
-
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.features-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.feature {
-  background: rgba(0,0,0,0.5);
-  padding: 20px;
-  border-radius: 12px;
-  width: 220px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #00ffff;
-}
-
-.vote-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.vote-container .btn {
-  padding: 12px 30px;
-}
-
-.store-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.rank-card {
-  background: rgba(0,0,0,0.6);
-  padding: 25px;
-  border-radius: 15px;
-  width: 180px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.rank-card h3 {
+.hero h2 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #00ffff;
 }
 
-.rank-card .price {
-  color: #ff00ff;
+.hero .highlight {
+  color: #ff4444;
+  font-weight: bold;
 }
 
-.rank-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffff;
+/* Cards Section */
+.gamemodes, .page {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.coins-title {
-  margin-top: 40px;
-  color: #ffd700;
-}
-
-.coins {
-  margin: 10px auto;
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  border-radius: 10px;
-  width: fit-content;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
+.cards, .store-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   margin-top: 20px;
-  background: #00ffff;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
   transition: 0.3s;
 }
 
-.btn:hover {
-  background: #ff00ff;
+.card:hover {
+  transform: translateY(-5px);
+  background: #292929;
+}
+
+.card h3 {
+  color: #ff4444;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff4444;
+  border: none;
+  border-radius: 5px;
   color: white;
-  box-shadow: 0 0 15px #ff00ff;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+.card button:hover {
+  background: #ff2222;
+}
+
+/* Vote Page */
+.vote-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vote-links a {
+  padding: 12px;
+  background: #ff4444;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.vote-links a:hover {
+  background: #ff2222;
+}
+
+/* Footer */
 footer {
-  padding: 20px;
   text-align: center;
-  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  background: #1c1c1c;
+  margin-top: 40px;
 }
-
-
