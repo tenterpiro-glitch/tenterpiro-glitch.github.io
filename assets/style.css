@@ -1,0 +1,144 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background: #0e0e0e;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background: #1c1c1c;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: #ff4444;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ff4444;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url("https://wallpapercave.com/wp/wp12120368.jpg") center/cover no-repeat;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero .highlight {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+/* Cards Section */
+.gamemodes, .page {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cards, .store-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #292929;
+}
+
+.card h3 {
+  color: #ff4444;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff4444;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #ff2222;
+}
+
+/* Vote Page */
+.vote-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vote-links a {
+  padding: 12px;
+  background: #ff4444;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.vote-links a:hover {
+  background: #ff2222;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1c1c1c;
+  margin-top: 40px;
+}
