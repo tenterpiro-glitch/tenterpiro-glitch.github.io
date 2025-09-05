@@ -1,0 +1,83 @@
+/* Google Font */
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #00ffff;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #ff00ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://wallpaperaccess.com/full/1289986.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 20px;
+    background: #00ffff;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #ff00ff;
+    color: white;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature {
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+}
