@@ -3,22 +3,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
 }
 
 body {
-  background: #0e0e0e;
-  color: #f1f1f1;
+  background: linear-gradient(135deg, #0a0f1c, #001f33);
+  color: #eafaff;
   line-height: 1.6;
 }
 
 /* Navbar */
 header {
-  background: #1c1c1c;
+  background: rgba(0, 0, 0, 0.6);
   padding: 15px 20px;
   position: sticky;
   top: 0;
+  backdrop-filter: blur(10px);
   z-index: 100;
 }
 
@@ -29,8 +30,9 @@ nav {
 }
 
 nav h1 {
-  color: #ff4444;
-  font-size: 1.5rem;
+  color: #00f0ff;
+  font-size: 1.8rem;
+  text-shadow: 0 0 15px #00f0ff;
 }
 
 nav ul {
@@ -41,104 +43,116 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #f1f1f1;
+  color: #eafaff;
   transition: 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #ff4444;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: url("https://wallpapercave.com/wp/wp12120368.jpg") center/cover no-repeat;
+  background: url("https://wallpapercave.com/wp/wp9115049.jpg") center/cover no-repeat;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  color: #00f0ff;
+  text-shadow: 0 0 20px #00f0ff;
 }
 
 .hero .highlight {
-  color: #ff4444;
+  color: #00f0ff;
   font-weight: bold;
+  text-shadow: 0 0 15px #00f0ff;
 }
 
 /* Cards Section */
 .gamemodes, .page {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .cards, .store-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .card {
-  background: #1c1c1c;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 240, 255, 0.5);
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
   transition: 0.3s;
+  backdrop-filter: blur(10px);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  background: #292929;
+  transform: translateY(-8px);
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px #00f0ff;
 }
 
 .card h3 {
-  color: #ff4444;
-  margin-bottom: 10px;
+  color: #00f0ff;
+  margin-bottom: 12px;
 }
 
 .card button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #ff4444;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: #00f0ff;
   border: none;
-  border-radius: 5px;
-  color: white;
+  border-radius: 6px;
+  color: #001f33;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .card button:hover {
-  background: #ff2222;
+  background: #00cfe6;
+  box-shadow: 0 0 15px #00f0ff;
 }
 
 /* Vote Page */
 .vote-links {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
 .vote-links a {
-  padding: 12px;
-  background: #ff4444;
-  color: white;
-  border-radius: 5px;
+  padding: 14px;
+  background: #00f0ff;
+  color: #001f33;
+  border-radius: 6px;
   text-decoration: none;
+  font-weight: bold;
   transition: 0.3s;
 }
 
 .vote-links a:hover {
-  background: #ff2222;
+  background: #00cfe6;
+  box-shadow: 0 0 15px #00f0ff;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #1c1c1c;
-  margin-top: 40px;
+  padding: 22px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 45px;
+  color: #88f7ff;
 }
+
