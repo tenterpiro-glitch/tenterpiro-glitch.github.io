@@ -243,3 +243,9 @@ footer {
   font-weight: normal;
 }
 
+/* Navbar logo size fix */
+nav .logo img {
+  height: 50px;   /* upar chhota mast size */
+  width: auto;
+}
+
