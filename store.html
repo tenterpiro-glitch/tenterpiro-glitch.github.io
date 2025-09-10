@@ -1,41 +1,85 @@
-<div class="store-items">
-  <div class="item card rank-card">
-    <h2>Pain Rank</h2>
-    <p><strong>₹259</strong></p>
-    <a href="https://discord.tentermc.fun" target="_blank" class="btn-green">Buy Now</a>
-  </div>
-  <div class="item card rank-card">
-    <h2>Curse Rank</h2>
-    <p><strong>₹159</strong></p>
-    <a href="https://discord.tentermc.fun" target="_blank" class="btn-green">Buy Now</a>
-  </div>
-  <div class="item card rank-card">
-    <h2>King Rank</h2>
-    <p><strong>₹99</strong></p>
-    <a href="https://discord.tentermc.fun" target="_blank" class="btn-green">Buy Now</a>
-  </div>
-  <div class="item card rank-card">
-    <h2>Glory Rank</h2>
-    <p><strong>₹50</strong></p>
-    <a href="https://discord.tentermc.fun" target="_blank" class="btn-green">Buy Now</a>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TenterMC Store</title>
+  <link rel="stylesheet" href="style.css"> <!-- Make sure style.css yahi folder me ho -->
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
 
-<h2 class="section-title">Coin Packs</h2>
-<div class="store-items">
-  <div class="item card coin-card">
-    <h2>1000 Coins</h2>
-    <p><strong>₹50</strong></p>
-    <a href="https://discord.tentermc.fun" target="_blank" class="btn-green">Buy Now</a>
-  </div>
-  <div class="item card coin-card">
-    <h2>2500 Coins</h2>
-    <p><strong>₹99</strong></p>
-    <a href="https://discord.tentermc.fun" target="_blank" class="btn-green">Buy Now</a>
-  </div>
-  <div class="item card coin-card">
-    <h2>5000 Coins</h2>
-    <p><strong>₹200</strong></p>
-    <a href="https://discord.tentermc.fun" target="_blank" class="btn-green">Buy Now</a>
-  </div>
-</div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo">
+      <span>TenterMC</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vote.html">Vote</a></li>
+      <li><a href="store.html" class="active">Store</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="title"><span>Ranks & Coins</span></h1>
+    <p class="subtitle">Support the server by buying ranks or coins!</p>
+  </section>
+
+  <!-- Store Items -->
+  <section class="store-items">
+
+    <!-- Ranks -->
+    <div class="card rank">
+      <h2>Pain Rank</h2>
+      <p>₹259</p>
+      <a href="https://discord.tentermc.fun" class="btn">Buy Now</a>
+    </div>
+
+    <div class="card rank">
+      <h2>Curse Rank</h2>
+      <p>₹159</p>
+      <a href="https://discord.tentermc.fun" class="btn">Buy Now</a>
+    </div>
+
+    <div class="card rank">
+      <h2>King Rank</h2>
+      <p>₹99</p>
+      <a href="https://discord.tentermc.fun" class="btn">Buy Now</a>
+    </div>
+
+    <div class="card rank">
+      <h2>Glory Rank</h2>
+      <p>₹50</p>
+      <a href="https://discord.tentermc.fun" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Coins -->
+    <div class="card coin">
+      <h2>1000 Coins</h2>
+      <p>₹50</p>
+      <a href="https://discord.tentermc.fun" class="btn">Buy Now</a>
+    </div>
+
+    <div class="card coin">
+      <h2>2500 Coins</h2>
+      <p>₹99</p>
+      <a href="https://discord.tentermc.fun" class="btn">Buy Now</a>
+    </div>
+
+    <div class="card coin">
+      <h2>5000 Coins</h2>
+      <p>₹200</p>
+      <a href="https://discord.tentermc.fun" class="btn">Buy Now</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TenterMC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
