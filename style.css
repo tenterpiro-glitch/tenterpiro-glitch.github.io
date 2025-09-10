@@ -88,19 +88,19 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 120px 20px;
+  padding: 100px 20px;
   background: rgba(0,0,0,0.6);
   animation: fadeUp 1.2s ease-out;
 }
 .hero .title {
-  font-size: 55px;
+  font-size: 50px;
   animation: glow 2.5s infinite alternate;
 }
 .hero .title span {
   color: var(--aqua);
 }
 .hero .subtitle {
-  font-size: 22px;
+  font-size: 20px;
   margin: 15px 0;
   color: var(--yellow);
   animation: fadeIn 2s ease-in;
@@ -147,7 +147,7 @@ body {
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
   background: var(--green);
 }
 .btn:hover {
@@ -155,7 +155,7 @@ body {
   box-shadow: 0 0 15px var(--green);
 }
 
-/* Store Cards */
+/* Store Items */
 .store-items {
   display: flex;
   justify-content: center;
@@ -167,9 +167,19 @@ body {
   padding: 20px;
   border-radius: 12px;
   width: 220px;
-  color: white;
+  text-align: center;
+  font-size: 18px;
   transition: transform 0.3s, box-shadow 0.3s;
   animation: fadeUp 1.5s ease-out;
+}
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.card p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .card:hover {
   transform: scale(1.08);
@@ -179,6 +189,7 @@ body {
 /* Rank Cards */
 .card.rank {
   background: linear-gradient(135deg, var(--darkred), var(--red));
+  color: white;
 }
 
 /* Coin Cards */
@@ -211,3 +222,4 @@ footer {
   background: rgba(0,0,0,0.85);
   padding: 15px;
 }
+
