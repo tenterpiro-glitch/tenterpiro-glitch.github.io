@@ -3,37 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vote - TenterMC</title>
+  <title>TenterMC</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <img src="assets/logo.png" alt="TenterMC Logo">
       <span>TenterMC</span>
     </div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vote.html" class="active">Vote</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="vote.html">Vote</a></li>
       <li><a href="store.html">Store</a></li>
       <li><a href="https://discord.tentermc.fun" target="_blank">Discord</a></li>
     </ul>
   </nav>
 
-  <section class="page fade-in">
-    <h1>Vote for TenterMC</h1>
-    <p>Vote daily to earn rewards and help our community grow!</p>
-    <div class="vote-links">
-      <a href="https://minecraft-server-list.com" target="_blank" class="btn aqua">Vote Site 1</a>
-      <a href="https://topminecraftservers.org" target="_blank" class="btn red">Vote Site 2</a>
-      <a href="https://minecraft-mp.com" target="_blank" class="btn yellow">Vote Site 3</a>
-    </div>
-  </section>
+  <!-- Hero Section -->
+  <header class="hero fade-in">
+    <h1 class="title">Welcome to <span>TenterMC</span></h1>
+    <p class="subtitle">Survival • Minigames • Adventure</p>
 
+    <div class="server-ip slide-up">
+      <p>Server IP:</p>
+      <div class="ip-box">
+        <span id="server-ip">play.tentermc.fun</span>
+        <button onclick="copyIP()">Copy</button>
+      </div>
+    </div>
+
+    <a href="https://discord.tentermc.fun" target="_blank" class="btn pulse aqua">Join Discord</a>
+  </header>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 TenterMC. All rights reserved.</p>
   </footer>
+
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText("play.tentermc.fun");
+      alert("✅ Server IP copied!");
+    }
+  </script>
 </body>
 </html>
-
 
