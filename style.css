@@ -3,10 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Minecraft', sans-serif;
 }
 
-/* Make sure background always covers the screen */
+/* Minecraft Font */
+@font-face {
+  font-family: 'Minecraft';
+  src: url('assets/minecraft.ttf') format('truetype');
+}
+
+/* Background Full Cover */
 html, body {
   height: 100%;
   margin: 0;
@@ -30,6 +36,8 @@ body {
   --red: #ff4747;
   --yellow: #ffd600;
   --green: #00ff7f;
+  --darkred: #660000;
+  --darkyellow: #665c00;
 }
 
 /* Navbar */
@@ -73,7 +81,7 @@ body {
 }
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: var(--green); /* Hover color green */
+  color: var(--green);
   transform: scale(1.1);
   text-shadow: 0 0 8px var(--green);
 }
@@ -140,15 +148,12 @@ body {
   border-radius: 6px;
   font-weight: bold;
   transition: transform 0.3s, background 0.3s;
+  background: var(--green);
 }
 .btn:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 15px white;
+  box-shadow: 0 0 15px var(--green);
 }
-
-.aqua { background: var(--aqua); }
-.red { background: var(--red); }
-.yellow { background: var(--yellow); color: black; }
 
 /* Store Cards */
 .store-items {
@@ -161,7 +166,7 @@ body {
 .card {
   padding: 20px;
   border-radius: 12px;
-  width: 200px;
+  width: 220px;
   color: white;
   transition: transform 0.3s, box-shadow 0.3s;
   animation: fadeUp 1.5s ease-out;
@@ -171,33 +176,33 @@ body {
   box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
+/* Rank Cards */
+.card.rank {
+  background: linear-gradient(135deg, var(--darkred), var(--red));
+}
+
+/* Coin Cards */
+.card.coin {
+  background: linear-gradient(135deg, var(--darkyellow), var(--yellow));
+  color: black;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 @keyframes slideDown {
   from { transform: translateY(-100%); }
   to { transform: translateY(0); }
 }
-
 @keyframes fadeUp {
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
-
 @keyframes glow {
   from { text-shadow: 0 0 10px var(--aqua), 0 0 20px var(--red); }
   to { text-shadow: 0 0 20px var(--yellow), 0 0 30px var(--red); }
-}
-
-.pulse {
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
 }
 
 /* Footer */
