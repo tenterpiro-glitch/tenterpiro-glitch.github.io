@@ -1,18 +1,24 @@
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 
-body {
-  background: url("assets/bg.jpg") no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  animation: fadeIn 1s ease-in;
-}
-
 /* Colors */
 :root {
   --aqua: #00eaff;
   --red: #ff4747;
   --yellow: #ffd600;
+  --dark: #0d0d0d;
+}
+
+/* Body Background */
+body {
+  background: linear-gradient(135deg, var(--dark), #111);
+  background-image: url("assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
 }
 
 /* Navbar */
@@ -20,16 +26,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.8);
+  background: linear-gradient(90deg, var(--aqua), var(--red), var(--yellow));
   padding: 10px 25px;
   position: sticky;
   top: 0;
+  z-index: 1000;
   animation: slideDown 0.6s ease-out;
 }
 
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo img { width: 40px; height: 40px; }
-.logo span { font-size: 22px; font-weight: bold; color: var(--aqua); }
+.logo span { font-size: 22px; font-weight: bold; color: white; text-shadow: 0 0 8px black; }
 
 .nav-links { list-style: none; display: flex; gap: 20px; }
 .nav-links li a {
@@ -39,21 +46,25 @@ body {
   transition: 0.3s;
 }
 .nav-links li a:hover,
-.nav-links li a.active { color: var(--yellow); }
+.nav-links li a.active { color: black; }
 
 /* Hero */
 .hero {
   padding: 120px 20px;
   background: rgba(0,0,0,0.65);
+  border-radius: 12px;
+  margin: 30px auto;
+  width: 80%;
 }
 .hero .title { font-size: 55px; }
-.hero .title span { color: var(--aqua); }
+.hero .title span { color: var(--aqua); text-shadow: 0 0 10px var(--aqua); }
 .hero .subtitle { font-size: 22px; margin: 15px 0; color: var(--yellow); }
 
-/* Server IP Box */
+/* Server IP */
 .server-ip { margin: 20px 0; }
 .ip-box {
   display: inline-flex;
+  align-items: center;
   background: rgba(255,255,255,0.1);
   border: 2px solid var(--aqua);
   padding: 8px 15px;
@@ -85,18 +96,15 @@ body {
 }
 .btn:hover { transform: scale(1.1); }
 
-.aqua { background: var(--aqua); }
+.aqua { background: var(--aqua); color: black; }
 .red { background: var(--red); }
 .yellow { background: var(--yellow); color: black; }
 
-/* Store Cards */
-.store-items {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
+/* Store & Vote */
+.page { padding: 80px 20px; background: rgba(0,0,0,0.7); border-radius: 12px; margin: 30px auto; width: 80%; }
+.page h1 { font-size: 36px; margin-bottom: 20px; color: var(--aqua); text-shadow: 0 0 8px black; }
+.vote-links, .store-items { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+
 .card {
   padding: 20px;
   border-radius: 12px;
@@ -104,25 +112,27 @@ body {
   color: white;
   transition: transform 0.3s;
 }
-.card:hover { transform: scale(1.05); }
+.card:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--aqua); }
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.95);
+  padding: 15px;
+  margin-top: 50px;
+}
 
 /* Animations */
 @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
 @keyframes slideDown { from {transform: translateY(-100%);} to {transform: translateY(0);} }
+@keyframes slideUp { from {transform: translateY(50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
 
 .fade-in { animation: fadeIn 1s ease-in; }
+.slide-up { animation: slideUp 1s ease-out; }
 .pulse { animation: pulse 2s infinite; }
 
 @keyframes pulse {
   0%,100% { transform: scale(1); }
   50% { transform: scale(1.1); }
-}
-
-/* Footer */
-footer {
-  background: rgba(0,0,0,0.9);
-  padding: 15px;
-  margin-top: 50px;
 }
 
 
