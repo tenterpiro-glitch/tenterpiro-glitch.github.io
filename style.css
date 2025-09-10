@@ -1,24 +1,35 @@
 /* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Make sure background always covers the screen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("assets/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1.5s ease-in;
+}
 
 /* Colors */
 :root {
   --aqua: #00eaff;
   --red: #ff4747;
   --yellow: #ffd600;
-  --dark: #0d0d0d;
-}
-
-/* Body Background */
-body {
-  background: linear-gradient(135deg, var(--dark), #111);
-  background-image: url("assets/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  min-height: 100vh;
-  animation: fadeIn 1s ease-in;
+  --green: #00ff7f;
 }
 
 /* Navbar */
@@ -26,19 +37,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, var(--aqua), var(--red), var(--yellow));
+  background: rgba(0,0,0,0.8);
   padding: 10px 25px;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  animation: slideDown 0.6s ease-out;
+  z-index: 10;
+  animation: slideDown 0.8s ease-out;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; }
-.logo img { width: 40px; height: 40px; }
-.logo span { font-size: 22px; font-weight: bold; color: white; text-shadow: 0 0 8px black; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+.logo span {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--aqua);
+}
 
-.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 .nav-links li a {
   color: white;
   text-decoration: none;
@@ -46,32 +72,49 @@ body {
   transition: 0.3s;
 }
 .nav-links li a:hover,
-.nav-links li a.active { color: black; }
+.nav-links li a.active {
+  color: var(--green); /* Hover color green */
+  transform: scale(1.1);
+  text-shadow: 0 0 8px var(--green);
+}
 
-/* Hero */
+/* Hero Section */
 .hero {
   padding: 120px 20px;
-  background: rgba(0,0,0,0.65);
-  border-radius: 12px;
-  margin: 30px auto;
-  width: 80%;
+  background: rgba(0,0,0,0.6);
+  animation: fadeUp 1.2s ease-out;
 }
-.hero .title { font-size: 55px; }
-.hero .title span { color: var(--aqua); text-shadow: 0 0 10px var(--aqua); }
-.hero .subtitle { font-size: 22px; margin: 15px 0; color: var(--yellow); }
+.hero .title {
+  font-size: 55px;
+  animation: glow 2.5s infinite alternate;
+}
+.hero .title span {
+  color: var(--aqua);
+}
+.hero .subtitle {
+  font-size: 22px;
+  margin: 15px 0;
+  color: var(--yellow);
+  animation: fadeIn 2s ease-in;
+}
 
-/* Server IP */
-.server-ip { margin: 20px 0; }
+/* Server IP Box */
+.server-ip {
+  margin: 20px 0;
+}
 .ip-box {
   display: inline-flex;
-  align-items: center;
   background: rgba(255,255,255,0.1);
   border: 2px solid var(--aqua);
   padding: 8px 15px;
   border-radius: 8px;
   gap: 10px;
+  animation: fadeUp 1.4s ease-out;
 }
-.ip-box span { font-weight: bold; color: var(--yellow); }
+.ip-box span {
+  font-weight: bold;
+  color: var(--yellow);
+}
 .ip-box button {
   background: var(--red);
   border: none;
@@ -81,7 +124,11 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.ip-box button:hover { background: var(--yellow); color: black; }
+.ip-box button:hover {
+  background: var(--yellow);
+  color: black;
+  transform: scale(1.1);
+}
 
 /* Buttons */
 .btn {
@@ -94,45 +141,68 @@ body {
   font-weight: bold;
   transition: transform 0.3s, background 0.3s;
 }
-.btn:hover { transform: scale(1.1); }
+.btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px white;
+}
 
-.aqua { background: var(--aqua); color: black; }
+.aqua { background: var(--aqua); }
 .red { background: var(--red); }
 .yellow { background: var(--yellow); color: black; }
 
-/* Store & Vote */
-.page { padding: 80px 20px; background: rgba(0,0,0,0.7); border-radius: 12px; margin: 30px auto; width: 80%; }
-.page h1 { font-size: 36px; margin-bottom: 20px; color: var(--aqua); text-shadow: 0 0 8px black; }
-.vote-links, .store-items { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-
+/* Store Cards */
+.store-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 .card {
   padding: 20px;
   border-radius: 12px;
   width: 200px;
   color: white;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeUp 1.5s ease-out;
 }
-.card:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--aqua); }
-
-/* Footer */
-footer {
-  background: rgba(0,0,0,0.95);
-  padding: 15px;
-  margin-top: 50px;
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
 /* Animations */
-@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-@keyframes slideDown { from {transform: translateY(-100%);} to {transform: translateY(0);} }
-@keyframes slideUp { from {transform: translateY(50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-.fade-in { animation: fadeIn 1s ease-in; }
-.slide-up { animation: slideUp 1s ease-out; }
-.pulse { animation: pulse 2s infinite; }
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
 
+@keyframes fadeUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px var(--aqua), 0 0 20px var(--red); }
+  to { text-shadow: 0 0 20px var(--yellow), 0 0 30px var(--red); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
 @keyframes pulse {
-  0%,100% { transform: scale(1); }
+  0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
 }
 
-
+/* Footer */
+footer {
+  margin-top: auto;
+  background: rgba(0,0,0,0.85);
+  padding: 15px;
+}
